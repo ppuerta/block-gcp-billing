@@ -7,7 +7,7 @@ view: gcp_billing_export {
       FROM
         @{SCHEMA_NAME}.@{BILLING_EXPORT_TABLE_NAME}
       WHERE
-        {% condition date_filter %} _PARTITIONTIME {% endcondition %} ;;
+        {% condition date_filter %} pt {% endcondition %} ;;
   }
 
   ### FILTER ONLY FIELDS
